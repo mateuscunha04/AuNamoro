@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes loading{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#titulo{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 12px;
+}
+
+#titulo img{
+    height: 80px;
+    width: auto;
+    margin-bottom: 1.2rem;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Kadwa", Helvetica, sans-serif;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 722px;
+    width: 422px;
+    border-radius: 17px;
+    background: blueviolet;
+    padding: 2.2rem;
+}
+
+#descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.dados{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 300
+}
+
+#nome{
+    font-size: 45px;
+    font-weight: 650;
+}
+
+#imgdog{
+    height: 300px;
+    width: 350px;
+    object-fit:cover;
+    justify-self: center;
+    border-radius: 17px;
+    margin-bottom: 10px;
+}
+
+.dados{
+    color: azure;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: -17px;
+}
+
+.botao{
+    width: 10rem;
+    height: 4rem;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.botao img{
+    width: 24px;
+    height: 24px;
+}
+
+#descarte{
+    background-color: red;
+}
+
+#match{
+    background-color: green;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
+    display: block;
+    z-index: 2;
+    animation: loading 1s;
+}
+
+#pop-up{
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height: 622px;
+    width: 522px;
+    animation: loading 1s;
+}
+
+#pop-up h1, #pop-up h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+#pop-up b{
+    color: white;
+    font-size: 40px;
+}
+
+#selecao{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+#cao{
+    background-color: skyblue;
+}
+
+#cadela{
+    background-color: palevioletred;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Au Namoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="titulo">
+        <h1>Au Namoro</h1>
+        <img src="img/Frame 4.svg" alt="">
+    </div>
+    <div class="container">
+
+        <div id="descricao">
+
+            <div id="info">
+                <img src="https://optimumpet.com.br/media/uploads/2023/11/racas-de-cachorro-pequeno-chihuahua-01-1024x682.webp" alt="" id="imgdog" class="dados">
+                <h1 id="nome" class="dados">Mel</h1>
+                <h2 class="dados" id="raca">Shi-tzu</h2>
+                <h2 class="dados" id="idade">8 anos</h2>
+            </div>
+            <div id="botoes">
+                <div class="botao" id="match"><img width="34" height="34" src="https://img.icons8.com/glyph-neue/34/FFFFFF/checkmark.png" alt="checkmark"/></div>
+                <div class="botao" id="descarte"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/delete-sign.png" alt="delete-sign"/></div>
+            </div>
+        </div>
+
+        <div id="pop-up" class="container">
+            <h1>Se você procura um romance <br> <b>Au Namoro</b> <br> É o melhor lugar</h1>
+            <h1>Você é?</h1>
+            <div id="selecao">
+                <div class="botao" id="cadela" onclick="fechaPopup(1)"><h2>Cadela</h2></div>
+                <h1>OU</h1>
+                <div class="botao" id="cao" onclick="fechaPopup(2)"><h2>Cão</h2></div>
+            </div>
+        </div>
+
+    </div>
+    <div id="shadow"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
