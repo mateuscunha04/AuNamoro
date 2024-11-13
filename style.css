@@ -13,6 +13,18 @@
     }
 }
 
+@keyframes damatch{
+    0%{
+        font-size: 105px;
+    }
+    50%{
+        font-size: 125px;
+    }
+    100%{
+        font-size: 105px;
+    }
+}
+
 #titulo{
     display: flex;
     flex-direction: row;
@@ -33,6 +45,8 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: "Kadwa", Helvetica, sans-serif;
+    color: black;
+    background-color: rgb(255, 155, 189);
 }
 
 
@@ -43,7 +57,7 @@ body{
     height: 722px;
     width: 422px;
     border-radius: 17px;
-    background: blueviolet;
+    background: rgb(255, 91, 176);
     padding: 2.2rem;
 }
 
@@ -93,6 +107,10 @@ body{
     cursor: pointer;
 }
 
+.botao:hover{
+    box-shadow: 2px 2px white;
+}
+
 .botao img{
     width: 24px;
     height: 24px;
@@ -121,7 +139,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
+    background-color: rgba(0, 0, 0, 0.5);
     display: block;
     z-index: 2;
     animation: loading 1s;
@@ -158,9 +176,26 @@ body{
 }
 
 #cao{
-    background-color: skyblue;
+    background-color: rgb(173, 214, 230);
 }
 
 #cadela{
-    background-color: palevioletred;
+    background-color: rgb(255, 135, 175);
+}
+
+#deumatch {
+    z-index: 4;
+    font-size: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: white;
+    animation: linear;
+    animation-name: damatch;
+    animation-duration: 1s;
 }
