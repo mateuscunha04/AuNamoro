@@ -13,21 +13,40 @@
     }
 }
 
+@keyframes prolado{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 @keyframes damatch{
     0%{
-        opacity: 0;
+        opacity: 1;
+        height: 90px;
+        width: 90px;
     }
     25%{
         opacity: 1;
+        height: 100px;
+        width: 100px;
     }
     50%{
-        opacity: 0.5;
+        opacity: 1;
+        height: 90px;
+        width: 90px;
     }
     75%{
         opacity: 1;
+        height: 100px;
+        width: 100px;
     }
     100%{
         opacity: 0;
+        height: 90px;
+        width: 90px;
     }
 }
 
@@ -53,9 +72,8 @@ body{
     font-family: "Kadwa", Helvetica, sans-serif;
     color: black;
     background-color: rgb(255, 155, 189);
+    overflow: hidden;
 }
-
-
 
 .container{
     display: flex;
@@ -75,11 +93,17 @@ body{
     height: 100%;
 }
 
-.dados{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: 300
+.troca{
+    transform: translateX(-40%);
+    transition: transform 0.5s ease-in-out;
+    animation: prolado 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.novo{
+    animation: loading 0.5s ease-in-out;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 #nome{
@@ -97,6 +121,8 @@ body{
 }
 
 .dados{
+    display: flex;
+    justify-content: center;
     color: azure;
     font-size: 25px;
     font-weight: 200;
@@ -111,10 +137,12 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.15s ease-in-out;
 }
 
 .botao:hover{
-    box-shadow: 2px 2px white;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
 }
 
 .botao img{
@@ -191,16 +219,22 @@ body{
 
 #deumatch {
     z-index: 4;
-    font-size: 70px;
     position: fixed;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 42vh;
+    opacity: 0;
+}
+
+#boxmatch{
     width: 100%;
     height: 100%;
-    display: none;
-    color: white;
-    animation-name: damatch;
-    animation-duration: 1.5s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#deumatch, #boxmatch{
+    pointer-events: none;
 }
