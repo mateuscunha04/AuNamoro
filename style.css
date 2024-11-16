@@ -238,3 +238,94 @@ body{
 #deumatch, #boxmatch{
     pointer-events: none;
 }
+
+@media (max-width: 461px){
+    .container{
+        height: 542px;
+        width: 322px;
+    }
+
+    #imgdog {
+        height: 220px;
+        width: 270px;
+    }
+
+    .dados{
+        font-size: 22px;
+        margin-bottom: -19px;
+    }
+
+    #nome{
+        font-size: 35px;
+    }
+
+    .botao{
+        width: 8rem;
+        height: 3rem;
+    }
+
+    .botao img{
+        width: 20px;
+        height: 20px;
+    }
+
+    #pop-up{
+        height: 550px;
+        width: 330px;
+        padding: 30px;
+        justify-content: space-between;
+        align-self: center;
+        margin-top: -40px;
+    }
+
+    #selecao{
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    #pop-up h1, #pop-up h2{
+        font-size: 22px;
+    }
+
+    #pop-up h1 b{
+        font-size: 27px;
+    }
+
+    #deumatch{
+        width: 70px;
+        height: 70px;
+        top: 22.5%;
+    }
+
+    @keyframes damatch{
+        0%{
+            opacity: 1;
+            height: 70px;
+            width: 70px;
+        }
+        25%{
+            opacity: 1;
+            height: 77px;
+            width: 77px;
+        }
+        50%{
+            opacity: 1;
+            height: 70px;
+            width: 70px;
+        }
+        75%{
+            opacity: 1;
+            height: 77px;
+            width: 77px;
+        }
+        100%{
+            opacity: 0;
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    #proibido h2{
+        font-size: 18px;
+    }
+}
