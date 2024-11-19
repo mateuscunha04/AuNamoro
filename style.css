@@ -78,7 +78,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    height: 722px;
+    height: 700px;
     width: 422px;
     border-radius: 17px;
     background: rgb(255, 91, 176);
@@ -219,17 +219,12 @@ body{
 
 #deumatch {
     z-index: 4;
-    position: fixed;
     width: 100px;
     height: 100px;
-    margin-top: 42vh;
     opacity: 0;
 }
 
 #boxmatch{
-    width: 100%;
-    height: 100%;
-    position: fixed;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -241,7 +236,7 @@ body{
 
 @media (max-width: 461px){
     .container{
-        height: 542px;
+        height: 535px;
         width: 322px;
     }
 
