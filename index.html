@@ -105,6 +105,7 @@
 
         function montaPerfil(auau, x){
             const dbRef = database.ref(`${x}/${auau}`)
+            
 
             dbRef.once('value', (snapshot) => {
                 const data = snapshot.val();
@@ -115,6 +116,9 @@
                 document.getElementById("idade").innerHTML = newDog.idade;
                 document.getElementById("imgdog").src = `img/${x}/${newDog.nome}.jpg`;
             });
+
+            document.getElementById('descarte').style.pointerEvents = 'auto'
+            document.getElementById('match').style.pointerEvents = 'auto'
         }
 
         //Parte estrutural
@@ -144,7 +148,10 @@
         }
 
         function match(){
+            document.getElementById('descarte').style.pointerEvents = 'none'
+            document.getElementById('match').style.pointerEvents = 'none'
             document.getElementById("deumatch").style.animation = "damatch 2s ease-in-out";
+            document.querySelectorAll("botao").disabled = true
 
             setTimeout(() => {
                 document.getElementById("deumatch").style.animation = ""
@@ -156,6 +163,8 @@
         }
 
         function nao(){
+            document.getElementById('descarte').style.pointerEvents = 'none'
+            document.getElementById('match').style.pointerEvents = 'none'
             desc.classList.add('troca');
             contagem += 1;
             

@@ -98,12 +98,14 @@ body{
     transition: transform 0.5s ease-in-out;
     animation: prolado 0.5s ease-in-out;
     opacity: 0;
+    pointer-events: none;
 }
 
 .novo{
     animation: loading 0.5s ease-in-out;
     transform: translateX(0);
     opacity: 1;
+    pointer-events: none;
 }
 
 #nome{
@@ -232,6 +234,10 @@ body{
 
 #deumatch, #boxmatch{
     pointer-events: none;
+}
+
+#match, #descarte{
+    pointer-events: auto;
 }
 
 @media (max-width: 461px){
