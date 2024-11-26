@@ -32,9 +32,17 @@
             </div>
             <div id="botoes">
                 <div class="botao" id="match" onclick="match()"><img width="34" height="34" src="https://img.icons8.com/glyph-neue/34/FFFFFF/checkmark.png" alt="checkmark"/></div>
-                <div class="botao" id="descarte" onclick="nao()"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/delete-sign.png" alt="delete-sign"/></div>
+                <div class="botao" id="descarte" onclick="nao(1)"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/delete-sign.png" alt="delete-sign"/></div>
             </div>
         </div>
+        
+        <audio id="latido">
+            <source src="audio/latido.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="uivo">
+            <source src="audio/uivo.mp3" type="audio/mpeg">
+        </audio>
 
         <div id="pop-up" class="container">
             <h1>Se você procura um romance <br> <b>Au Namoro</b> <br> É o melhor lugar</h1>
@@ -123,6 +131,9 @@
 
         //Parte estrutural
 
+        const latido = document.getElementById("latido")
+        const uivo = document.getElementById("uivo")
+
         let btcadela = document.getElementById("cadela");
         let btcao = document.getElementById("cao");
         let popup = document.getElementById("pop-up");
@@ -153,6 +164,8 @@
             document.getElementById("deumatch").style.animation = "damatch 2s ease-in-out";
             document.querySelectorAll("botao").disabled = true
 
+            uivo.play();
+
             setTimeout(() => {
                 document.getElementById("deumatch").style.animation = ""
             }, 2002)
@@ -162,11 +175,15 @@
             }, 2002)
         }
 
-        function nao(){
+        function nao(audio){
             document.getElementById('descarte').style.pointerEvents = 'none'
             document.getElementById('match').style.pointerEvents = 'none'
             desc.classList.add('troca');
             contagem += 1;
+
+            if(audio == 1){
+                latido.play();
+            } 
             
             setTimeout(() => {
                 desc.classList.remove('troca')
